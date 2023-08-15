@@ -40,11 +40,14 @@ html {
     color: var(--color-bp-decor);
     background-color: #000;
     text-decoration: none;
+    text-align: center;
     padding: 14px 24px;
     margin-top: 15px;
     display: inline-block;
     font-weight: 600;
     border: 2px solid var(--color-bp-decor);
+    appearance: none;
+    -webkit-appearance: none;
 }
 
 .btn:hover {
@@ -98,7 +101,6 @@ html {
 
 #nav {
     display: inline-block;
-
 }
 
 #nav > li {
@@ -154,18 +156,29 @@ html {
     line-height: 38px;
 }
 
+#header .mobile-menu-btn,
 #header .search-btn {
+    position: absolute;
+    top: 0;
+    right: 0;;
+    text-align: center;
     padding: 0 21px;
     float: right;
-    height: 100%;
+    height: 46px;
 }
 
+#header .mobile-menu-btn {
+    display: none;
+}
+
+#header .mobile-menu-btn:hover,
 #header .search-btn:hover {
     color: #000;
     background-color: var(--color-bp-decor);
     cursor: pointer;
 }
 
+#header .menu-icon,
 #header .search-icon {
     line-height: 46px;
     color: #fff;
@@ -206,10 +219,12 @@ html {
 
 #content .content-section {
     width: 800px;
+    max-width: 100%;
     padding-top: 64px;
     margin-left: auto;
     margin-right: auto;
-
+    padding-left: 16px;
+    padding-right: 16px;
 }
 
 #content .section-heading {
@@ -242,7 +257,7 @@ html {
 
 
 #content .members-list {
-    margin-top: 48px;
+    margin-top: 32px;
 }
 
 #content .member-name {
@@ -304,7 +319,7 @@ html {
 /* TOUR DATES - DESTINATION CSS */
 
 .places-list {
-    margin-top: 32px;
+    margin-top: 16px;
 }
 
 .place-img {
@@ -345,6 +360,14 @@ html {
 
 
 /* Contact -CSS */
+
+#contact a {
+    color:#fff;
+}
+
+#contact a:hover {
+    color: var(--color-black-pink)
+}
 
 .contact-content {
     margin-top: 48px;

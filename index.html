@@ -6,6 +6,7 @@
     <title>BLACK PINK</title>
     <link rel="icon" type="image/x-icon" href="./assets/img/black pink.png">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
     <link rel="stylesheet" href="./assets/font/themify-icons-font/themify-icons/themify-icons.css">
 </head>
 <body>
@@ -34,6 +35,9 @@
             <div class="search-btn">
                 <i class="search-icon ti-search"></i>
             </div>
+            <div id ="mobile-menu" class="mobile-menu-btn">
+                <i class="menu-icon ti-menu"></i>
+            </div>
         </div>
             <!-- Begin: Slider -->
         <div id="slider">
@@ -52,21 +56,21 @@
                     <p class="section-sub-heading">Black Pink in your area</p>
                     <p class="about-text">BlackPink is a four member girl group from YG entertainment. They're a more recent group that debuted on August 8th, 2016. Their fandom name is BLINK.</p>
                     <div class="row members-list">
-                        <div class="text-center col-half col">
+                        <div class="s-col-full mt_16 text-center col-half col">
                             <div class="member-name">Jisoo</div>
                             <img src="./assets/img/jiso.jpg" alt="Name" class="member-img">
                         </div>
-                        <div class="text-center col-half col">
+                        <div class="s-col-full mt_16 text-center col-half col">
                             <div class="member-name">Jennie</div>
                             <img src="./assets/img/jennie.jpg" alt="Name" class="member-img">
                         </div>
                     </div>
                     <div class="members-list">
-                        <div class="text-center col-half col">
+                        <div class="s-col-full mt_16 text-center col-half col">
                             <div class="member-name">Roses</div>
                             <img src="./assets/img/roses.jpg" alt="Name" class="member-img">
                         </div>
-                        <div class="text-center col-half col">
+                        <div class="s-col-full mt_16 text-center col-half col">
                             <div class="member-name">Lisa</div>
                             <img src="./assets/img/lisa.jpg" alt="Name" class="member-img">
                         </div>
@@ -87,33 +91,33 @@
                     </ul>
                      <!-- Buy tickets -->
                     <div class="row places-list">
-                        <div class="col col-third">
+                        <div class="col col-third s-col-full mt_16">
                             <img src="./assets/img/destination/paris.jpg" alt="" class="place-img">
                             <div class="place-body">
                                 <h2 class="place-heading">BANGKOK</h2>
                                 <p class="place-time">2023.07.27 SAT 7PM</p>
                                 <p class="place-desc">RAJAMANGALA STADIUM</p>
-                                <button class="btn js-buy-ticket">Buy tickets</button>
+                                <button class="btn s-width-full js-buy-ticket">Buy tickets</button>
                             </div>
                         </div>
-                        <div class="col col-third">
+                        <div class="col col-third s-col-full mt_16">
                             <img src="./assets/img/destination/hn.jpg" alt="" class="place-img">
                             <div class="place-body">
                                 <h2 class="place-heading">HANOI</h2>
                                 <p class="place-time">2023.07.29 SAT 7:30PM</p>
                                 <p class="place-desc">
-                                    MY DINH NATIONAL STADIUM
+                                    MY DINH STADIUM
                                     </p>
-                                <button class="btn js-buy-ticket">Buy tickets</button>
+                                <button class="btn s-width-full js-buy-ticket">Buy tickets</button>
                             </div>
                         </div>
-                        <div class="col col-third">
+                        <div class="col col-third s-col-full mt_16">
                             <img src="./assets/img/destination/seoul.jpg" alt="" class="place-img">
                             <div class="place-body">
                                 <h2 class="place-heading">SEOUL</h2>
                                 <p class="place-time">2022.10.15 SAT 6PM</p>
                                 <p class="place-desc">KSPO DOME</p>
-                                <button class="btn js-buy-ticket">Buy tickets</button>
+                                <button class="btn s-width-full js-buy-ticket">Buy tickets</button>
                             </div>
                         </div>
                     </div>
@@ -126,18 +130,18 @@
                 <h2 class="section-heading">SUBSCRIBE</h2>
                 <p class="section-sub-heading">SIGN UP TO RECEIVE EMAIL UPDATES AND OFFERS FROM BLACKPINK</p>
                 <div class="row contact-content">
-                    <div class="col col-half contact-info">
+                    <div class="col col-half s-col-full contact-info">
                         <p><i class="ti-location-pin"></i>SEOUL,KOREA</p>
-                        <p><i class="ti-mobile"></i>Phone: +00 171717</p>
-                        <p><i class="ti-email"></i>Email: mail@gmail.com</p>
+                        <p><i class="ti-mobile"></i>Phone: <a href ="tel:+00 171717">+00 171717</a></p>
+                        <p><i class="ti-email"></i>Email: <a href ="mailto:mail@gmail.com">mail@gmail.com</a></p>
                     </div>
-                    <div class="col col-half contact-form">
+                    <div class="col col-half s-col-full contact-form">
                         <form action="">
                             <div class="row">
-                                <div class="col col-half">
+                                <div class="col s-col-full col-half">
                                     <input type="text" name="" required placeholder="Name" id="" class="form-control">
                                 </div>
-                                <div class="col col-half">
+                                <div class="col s-col-full col-half s-mt-8">
                                     <input type="email" name="" required placeholder="Email" id="" class="form-control">
                                 </div>
                             </div>
@@ -146,7 +150,7 @@
                                     <input type="text" name="" required placeholder="Message..." id="" class="form-control">
                                 </div>
                             </div>
-                            <input class="btn pull-right mt_16" type="submit" value="REGISTER">
+                            <input class="btn pull-right mt_16 s-width-full" type="submit" value="REGISTER">
                             
                         </form>
     
@@ -206,7 +210,41 @@
             </footer>
         </div>
     </div>
+
+    <!-- Javascript -->
     <script>
+        // Ẩn hiện menu ở mobile
+        let header = document.getElementById("header");
+        let menuIcon = document.getElementById("mobile-menu");
+        let headerHeight = header.clientHeight;
+
+        menuIcon.onclick = function() {
+            var isClosed = header.clientHeight === headerHeight;
+            if(isClosed) {
+                header.style.height ='auto';
+            }else {
+                header.style.height = null;
+            }
+        }
+    </script>
+    <script>
+        // Tự động đóng menu ở mobile
+        let menuItems = document.querySelectorAll('#nav li a[href*="#"]');
+        for(var i = 0; i < menuItems.length; i++) {
+            var item = menuItems[i];
+            
+            item.onclick = function(event) {
+                var isSubMenu = this.nextElementSibling && this.nextElementSiblingE.classList.contains("subnav");
+                if (!isSubMenu) {
+                    header.style.height = null;
+                } else {
+                    event.prevenDefault()
+                }
+            }
+         }
+    </script>
+    <script>
+        // Tao tác bấm mua tickets
         const buyBtns = document.querySelectorAll('.js-buy-ticket');
         const modal = document.querySelector('.js-modal');
         const modalClose = document.querySelector('.js-modal-close');
